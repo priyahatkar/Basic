@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab-ng-switch.component.scss']
 })
 export class TabNgSwitchComponent implements OnInit {
-  price: string = '5';
-  prices: string = '5';
+  public price: string = '5';
+  public prices: string = '5';
+  public framePrices: string = '5';
+
   constructor() { }
 
   ngOnInit(): void {

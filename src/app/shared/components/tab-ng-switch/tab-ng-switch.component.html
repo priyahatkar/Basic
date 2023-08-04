@@ -43,3 +43,32 @@
     <p class="alert alert-danger" *ngSwitchCase="10">The value is <strong>10</strong></p>
     <p class="alert alert-danger" *ngSwitchCase="20">The value is <strong>20</strong></p>
 </div>
+
+
+<hr>
+
+
+<ul class="nav nav-pills my-3">
+    <li class="nav-item">
+        <a href="javascript:;" [class.active]="framePrices == '5'" (click)="framePrices = '5'" class="nav-link">
+            set to 5
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" [class.active]="framePrices == '10'" (click)="framePrices = '10'" class="nav-link mx-3">
+            set to 10
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" [class.active]="framePrices == '20'" (click)="framePrices = '20'" class="nav-link">
+            set to 20
+        </a>
+    </li>
+</ul>
+
+
+<div class="tab-body mt-5">
+    <p class="bg-dark text-white p-3" *ngIf="framePrices === '5'">The value is <strong>5</strong></p>
+    <p class="bg-dark text-white p-3" *ngIf="framePrices === '10'">The value is <strong>10</strong></p>
+    <p class="bg-dark text-white p-3" *ngIf="framePrices === '20'">The value is <strong>20</strong></p>
+</div>

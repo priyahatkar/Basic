@@ -1,0 +1,60 @@
+
+
+<ul class="nav nav-pills my-3">
+    <li class="nav-item">
+        <a href="javascript:;" data-id="angular" class="nav-link" (click)="onTabClick($event)" [ngClass]="{
+            'active': frameWork === 'angular'
+        }">Angular</a>
+    </li>
+    <li class="nav-item mx-3">
+        <a href="javascript:;" data-id="javascript" class="nav-link" (click)="onTabClick($event)" [ngClass]="{
+            'active': frameWork === 'javascript'
+        }">Javascript</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" data-id="typescript" class="nav-link" (click)="onTabClick($event)" [ngClass]="{
+            'active': frameWork === 'typescript'
+        }">Typescript</a>
+    </li>
+</ul>
+
+<div class="tab-body">
+    <p class="alert alert-info" *ngIf="frameWork === 'angular'">
+        <strong>Angular</strong>
+        is a platform and framework for building single-page client applications using HTML and TypeScript. Angular is written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your applications.
+    </p>
+    <p class="alert alert-danger" *ngIf="frameWork === 'javascript'">
+        <strong>JavaScript</strong>
+        is the Programming Language for the Web. JavaScript can update and change both HTML and CSS. JavaScript can calculate, manipulate and validate data
+    </p>
+    <p class="alert alert-secondary" *ngIf="frameWork === 'typescript'">
+        <strong> TypeScript</strong>
+        is a syntactic superset of JavaScript which adds static typing. This basically means that TypeScript adds syntax on top of JavaScript, allowing developers to add types.
+    </p>
+</div>
+
+
+
+<ul class="nav nav-pills mt-5">
+    <li class="nav-item">
+        <a href="javascript:;" (click)="frameWorkName ='html'" [class.active]="frameWorkName === 'html'" class="nav-link">Html</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" (click)="frameWorkName ='css'" [class.active]="frameWorkName === 'css'" class="nav-link">Css</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" (click)="frameWorkName ='react'" [class.active]="frameWorkName === 'react'" class="nav-link">React</a>
+    </li>
+</ul>
+
+<div class="tab-body mt-3">
+    <p class="alert alert-secondary" *ngIf="frameWorkName === 'html'">
+        <strong>HTML</strong> stands for Hyper Text Markup Language. HTML is the standard markup language for creating Web pages. HTML describes the structure of a Web page
+    </p>
+    <p class="alert alert-warning" *ngIf="frameWorkName === 'css'">
+        <strong> CSS</strong> stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once. External stylesheets are stored in CSS files
+    </p>
+    <p class="alert alert-success" *ngIf="frameWorkName === 'react'">
+        <strong>React</strong> is a JavaScript library created by Facebook. React is a User Interface (UI) library. React is a tool for building UI components
+    </p>
+</div>

@@ -1,0 +1,45 @@
+<div class="mt-5">
+    <button class="btn btn-primary" (click)="price = '5'">Set value to 5</button>
+    <button class="btn btn-primary mx-3" (click)="price = '10'">Set value to 10</button>
+    <button class="btn btn-primary" (click)="price = '20'">Set value to 20</button>
+</div>
+
+
+<div class="my-5" [ngSwitch]="price">
+    <p class="alert alert-info" *ngSwitchCase="5">The value is <strong>5</strong></p>
+    <p class="alert alert-danger" *ngSwitchCase="10">The value is <strong>10</strong></p>
+    <p class="alert alert-success" *ngSwitchCase="20">The value is <strong>20</strong></p>
+</div>
+
+
+<!-- <div class="mt-5">
+    <button class="btn btn-primary" (click)="price = '5'">Set value to 5</button>
+    <button class="btn btn-primary mx-3" (click)="price = '10'">Set value to 10</button>
+    <button class="btn btn-primary" (click)="price = '20'">Set value to 20</button>
+</div> -->
+
+<hr>
+
+<ul class="nav nav-pills my-3">
+    <li class="nav-item">
+        <a href="javascript:;" [class.active]="prices == '5'" (click)="prices = '5'" class="nav-link">
+            set to 5
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" [class.active]="prices == '10'" (click)="prices = '10'" class="nav-link mx-3">
+            set to 10
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" [class.active]="prices == '20'" (click)="prices = '20'" class="nav-link">
+            set to 20
+        </a>
+    </li>
+</ul>
+
+<div class="tab-body" [ngSwitch]="prices">
+    <p class="alert alert-danger" *ngSwitchCase="5">The value is <strong>5</strong></p>
+    <p class="alert alert-danger" *ngSwitchCase="10">The value is <strong>10</strong></p>
+    <p class="alert alert-danger" *ngSwitchCase="20">The value is <strong>20</strong></p>
+</div>
